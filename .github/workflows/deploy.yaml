@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -v -p build/web
           cd project
-          godot --headless --verbose --export-release "HTML5" ../build/web/index.html
+          godot --headless --verbose --export-release "Web" ../build/web/index.html
       - name: Add coi-service-worker
         run: |
           git clone https://github.com/gzuidhof/coi-serviceworker.git
