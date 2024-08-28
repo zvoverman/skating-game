@@ -2,7 +2,7 @@ extends Node2D
 
 # below line caused godot to crash - moved files outside of editor 
 # 'possible cyclic resource inclusion'
-var WorldScene: PackedScene = preload("res://scenes/world.tscn")
+# var WorldScene: PackedScene = preload("res://scenes/world.tscn")
 @onready var Player = $Player
 @onready var Chunks = $Chunks
 @onready var Score = $Camera2D/Score
