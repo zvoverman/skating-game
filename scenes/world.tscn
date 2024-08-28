@@ -27,5 +27,5 @@ theme_override_colors/font_color = Color(0.32549, 0.32549, 0.32549, 1)
 [node name="Chunks" type="Node" parent="."]
 
 [node name="Player" parent="." node_paths=PackedStringArray("World") instance=ExtResource("2_ctbnd")]
-position = Vector2(200, -100)
+position = Vector2(100, -100)
 World = NodePath("..")
