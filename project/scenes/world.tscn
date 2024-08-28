@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://cep6yq1stowt5"]
+
+[ext_resource type="Script" path="res://project/scripts/world.gd" id="1_n02te"]
+[ext_resource type="PackedScene" uid="uid://cpos732lfps07" path="res://project/scenes/player.tscn" id="2_ctbnd"]
+
+[sub_resource type="FontFile" id="FontFile_wi4fi"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_n02te")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, -70)
+
+[node name="Score" type="Label" parent="Camera2D"]
+offset_left = 240.0
+offset_top = -175.0
+offset_right = 309.0
+offset_bottom = -152.0
+theme_override_colors/font_color = Color(0.32549, 0.32549, 0.32549, 1)
+theme_override_fonts/font = SubResource("FontFile_wi4fi")
+horizontal_alignment = 2
+
+[node name="HighScore" type="Label" parent="Camera2D"]
+visible = false
+offset_left = 141.0
+offset_top = -177.0
+offset_right = 204.0
+offset_bottom = -154.0
+theme_override_colors/font_color = Color(0.32549, 0.32549, 0.32549, 1)
+text = "HI"
+
+[node name="Player" parent="." node_paths=PackedStringArray("World") instance=ExtResource("2_ctbnd")]
+position = Vector2(100, -100)
+World = NodePath("..")
+
+[node name="Chunks" type="Node" parent="."]

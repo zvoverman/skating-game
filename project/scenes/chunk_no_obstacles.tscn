@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvyfiy82j5ime"]
+
+[ext_resource type="PackedScene" uid="uid://d1ye7lacsmglb" path="res://scenes/chunk.tscn" id="1_u6thf"]
+
+[sub_resource type="GDScript" id="GDScript_8o410"]
+script/source = "extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+func unload():
+	pass
+"
+
+[node name="Chunk" instance=ExtResource("1_u6thf")]
+script = SubResource("GDScript_8o410")
