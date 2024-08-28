@@ -14,10 +14,17 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		jump()
 
 	move_and_slide()
 	
+func jump():
+	velocity.y = JUMP_VELOCITY
+	
 func damage():
 	World.reset()
+	
+func _unhandled_input(event):
+	if event is InputEventScreenTouch and is_on_floor():
+		jump()
 	
