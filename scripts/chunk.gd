@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var Obstacles = $Obstacles
-var Trash_Bin: PackedScene = load("res://project/scenes/trash_bin.tscn")
-var Traffic_Cone: PackedScene = load("res://project/scenes/traffic_cone.tscn")
+var Trash_Bin: PackedScene = load("res://scenes/trash_bin.tscn")
+var Traffic_Cone: PackedScene = load("res://scenes/traffic_cone.tscn")
 var obstacle_types: Array = [Trash_Bin, Traffic_Cone]
 var obstacles: Array = []
 

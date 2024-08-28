@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnxkjag7lwjgx"
-path="res://.godot/imported/traffic_cone_placeholder.png-90da96907676298b359c1a926b8425f5.ctex"
+uid="uid://ura1rws1kt66"
+path="res://.godot/imported/trash_bin.png-1284d871f56467e75f465b364d170d20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://project/assets/traffic_cone_placeholder.png"
-dest_files=["res://.godot/imported/traffic_cone_placeholder.png-90da96907676298b359c1a926b8425f5.ctex"]
+source_file="res://assets/trash_bin.png"
+dest_files=["res://.godot/imported/trash_bin.png-1284d871f56467e75f465b364d170d20.ctex"]
 
 [params]
 

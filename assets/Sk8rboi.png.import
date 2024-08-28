@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ura1rws1kt66"
-path="res://.godot/imported/trash_bin.png-c94b35f18cc6ea9b87bb8e6d4af6038f.ctex"
+uid="uid://8gshco2rvpiy"
+path="res://.godot/imported/Sk8rboi.png-d9baf212b40d92abc3b828bd9ca56301.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://project/assets/trash_bin.png"
-dest_files=["res://.godot/imported/trash_bin.png-c94b35f18cc6ea9b87bb8e6d4af6038f.ctex"]
+source_file="res://assets/Sk8rboi.png"
+dest_files=["res://.godot/imported/Sk8rboi.png-d9baf212b40d92abc3b828bd9ca56301.ctex"]
 
 [params]
 

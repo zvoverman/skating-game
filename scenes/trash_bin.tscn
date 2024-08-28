@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://xqkxmxrnc80r"]
 
-[ext_resource type="Script" path="res://project/scripts/obstacle.gd" id="1_7patp"]
-[ext_resource type="Texture2D" uid="uid://ura1rws1kt66" path="res://project/assets/trash_bin.png" id="1_bst32"]
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_7patp"]
+[ext_resource type="Texture2D" uid="uid://ura1rws1kt66" path="res://assets/trash_bin.png" id="1_bst32"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ge82x"]
 radius = 9.0

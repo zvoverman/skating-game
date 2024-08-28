@@ -27,7 +27,6 @@ jobs:
       - name: Web Build
         run: |
           mkdir -v -p build/web
-          cd project
           godot --headless --verbose --export-release "Web" ../build/web/index.html
       - name: Add coi-service-worker
         run: |

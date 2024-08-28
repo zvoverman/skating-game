@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1ye7lacsmglb"]
 
-[ext_resource type="Script" path="res://project/scripts/chunk.gd" id="1_5wrk8"]
-[ext_resource type="Texture2D" uid="uid://diblvp3gxsr6q" path="res://project/assets/floor.png" id="2_gb8bm"]
+[ext_resource type="Script" path="res://scripts/chunk.gd" id="1_t73m7"]
+[ext_resource type="Texture2D" uid="uid://diblvp3gxsr6q" path="res://assets/floor.png" id="2_pubyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5jwgi"]
 size = Vector2(640, 640)
 
 [node name="Chunk" type="Node2D"]
-script = ExtResource("1_5wrk8")
+script = ExtResource("1_t73m7")
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(320, 320)
@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_5jwgi")
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
 position = Vector2(-6.07967e-06, 2.44379e-06)
 scale = Vector2(1.1, 1)
-texture = ExtResource("2_gb8bm")
+texture = ExtResource("2_pubyd")
 
 [node name="Obstacles" type="Node2D" parent="."]
 
