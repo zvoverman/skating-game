@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="skating-sgame"
+config/name="skating-game"
 run/main_scene="res://project/scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://project/assets/icon.svg"
