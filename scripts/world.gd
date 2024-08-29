@@ -63,7 +63,7 @@ func reset():
 	if (total_score > high_score):
 		high_score = total_score
 		
-	HighScore.text = 'HI   ' + str(high_score)
+	HighScore.text = 'HI SCORE:   ' + str(high_score)
 	Score.text = "0"	
 	total_score = 0
 	

@@ -1,13 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://1y6mjtlgxsvj"]
+[gd_scene load_steps=4 format=3 uid="uid://1y6mjtlgxsvj"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_n02te"]
+[ext_resource type="FontFile" uid="uid://b51saovrvm1yv" path="res://assets/fonts/Minecraft.ttf" id="2_5ehxf"]
 [ext_resource type="PackedScene" uid="uid://cpos732lfps07" path="res://scenes/player.tscn" id="2_ctbnd"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_n02te")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(320, -50)
+position = Vector2(320, -100)
 
 [node name="Score" type="Label" parent="Camera2D"]
 offset_left = 214.0
@@ -15,17 +16,20 @@ offset_top = -176.0
 offset_right = 317.0
 offset_bottom = -152.0
 theme_override_colors/font_color = Color(0.32549, 0.32549, 0.32549, 1)
+theme_override_fonts/font = ExtResource("2_5ehxf")
 horizontal_alignment = 2
 
 [node name="HighScore" type="Label" parent="Camera2D"]
-offset_left = -315.0
-offset_top = -177.0
-offset_right = -208.0
-offset_bottom = -152.0
+offset_left = -316.0
+offset_top = -176.0
+offset_right = -209.0
+offset_bottom = -151.0
 theme_override_colors/font_color = Color(0.32549, 0.32549, 0.32549, 1)
+theme_override_fonts/font = ExtResource("2_5ehxf")
 
 [node name="Chunks" type="Node" parent="."]
 
 [node name="Player" parent="." node_paths=PackedStringArray("World") instance=ExtResource("2_ctbnd")]
+top_level = true
 position = Vector2(100, -100)
 World = NodePath("..")
