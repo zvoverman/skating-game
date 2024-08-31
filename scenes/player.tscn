@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_nc2u8"]
 [ext_resource type="Texture2D" uid="uid://cs1aswuagw3d5" path="res://assets/kickflip.png" id="3_80mky"]
-[ext_resource type="Texture2D" uid="uid://c1aadu4ibolyb" path="res://assets/skate_dude_gray.png" id="4_jgj0f"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u0aei"]
+load_path = "res://.godot/imported/skate_dude_gray.png-670e29eac1b79521301afe5cfe55d9be.ctex"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s0f7d"]
 
@@ -18,7 +20,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_jgj0f")]
+"values": [SubResource("CompressedTexture2D_u0aei")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -72,7 +74,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_jgj0f")]
+"values": [SubResource("CompressedTexture2D_u0aei")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -176,7 +178,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_jgj0f")]
+"values": [SubResource("CompressedTexture2D_u0aei")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -306,7 +308,7 @@ script = ExtResource("1_nc2u8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("4_jgj0f")
+texture = SubResource("CompressedTexture2D_u0aei")
 hframes = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
