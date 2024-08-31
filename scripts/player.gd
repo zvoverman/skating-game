@@ -26,8 +26,8 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func jump():
-	velocity.y = JUMP_VELOCITY
 	state_machine.travel("kickflip")
+	velocity.y = JUMP_VELOCITY
 	
 func damage():
 	World.reset()
@@ -37,7 +37,7 @@ func _unhandled_input(event):
 	if event is InputEventScreenTouch and is_on_floor():
 		jump()
 	
-	if event is InputEventScreenTouch and event.pressed:
+	if event is InputEventScreenTouch and event.pressed and !is_on_floor() and velocity.y < 0:
 		is_pressed = true
 	else:
 		is_pressed = false
