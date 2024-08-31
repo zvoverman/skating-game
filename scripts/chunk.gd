@@ -4,7 +4,8 @@ extends Node2D
 var Trash_Bin: PackedScene = load("res://scenes/trash_bin.tscn")
 var Traffic_Cone: PackedScene = load("res://scenes/traffic_cone.tscn")
 var Dumpster: PackedScene = load("res://scenes/dumpster.tscn")
-var obstacle_types: Array = [Trash_Bin, Traffic_Cone, Dumpster]
+var Fallen_Trash_Bin: PackedScene = load("res://scenes/fallen_trash_bin.tscn")
+var obstacle_types: Array = [Trash_Bin, Traffic_Cone, Dumpster, Fallen_Trash_Bin]
 var obstacles: Array = []
 
 const START_X: int = 40;
@@ -28,3 +29,7 @@ func create_obstacle(x_position: int) -> Node2D:
 		obstacles.append(create_obstacle(obstacle.position.x + 200))
 	Obstacles.add_child(obstacle)
 	return obstacle
+	
+func new_obstacle(obstacle_name: String):
+	if obstacle_name == "Dumpster":
+		obstacle_types.append(Dumpster)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbp36gw8aqkpq"]
+
+[ext_resource type="Script" path="res://scripts/obstacle.gd" id="1_8pcuq"]
+[ext_resource type="Texture2D" uid="uid://ggokg3argpbk" path="res://assets/fallen_trash_bin.png" id="2_pahix"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehy2f"]
+radius = 14.0
+
+[node name="Fallen_Trash_Bin" type="StaticBody2D"]
+script = ExtResource("1_8pcuq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.425, -16)
+scale = Vector2(2, 2)
+texture = ExtResource("2_pahix")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_ehy2f")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

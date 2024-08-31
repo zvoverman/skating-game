@@ -7,6 +7,7 @@ extends Node2D
 @onready var Chunks = $Chunks
 @onready var Score = $Camera2D/Score
 @onready var HighScore = $Camera2D/HighScore
+@onready var Background = $ParallaxBackground
 var ChunkScene: PackedScene = preload("res://scenes/chunk.tscn")
 var ChunkNoObstacleScene: PackedScene = preload("res://scenes/chunk_no_obstacles.tscn")
 var chunks: Array = [];
@@ -29,10 +30,14 @@ func _process(delta):
 	Score.text = str(total_score)
 	update_chunks()
 	move_chunks(speed, delta)
+	move_background(speed, delta)
 	
 func move_chunks(speed: int, delta: float):
 	for chunk in chunks:
 		chunk.position.x -= speed * delta;
+
+func move_background(speed: int, delta: float):
+	Background.scroll_base_offset.x -= speed * delta;
 
 func update_chunks():
 	for chunk in chunks:

@@ -38,4 +38,4 @@ ui_up={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0.899258, 0.899258, 0.899258, 1)
+environment/defaults/default_clear_color=Color(0.87451, 0.87451, 0.87451, 1)

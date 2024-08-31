@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://1y6mjtlgxsvj"]
+[gd_scene load_steps=6 format=3 uid="uid://1y6mjtlgxsvj"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_n02te"]
 [ext_resource type="FontFile" uid="uid://b51saovrvm1yv" path="res://assets/fonts/Minecraft.ttf" id="2_5ehxf"]
 [ext_resource type="PackedScene" uid="uid://cpos732lfps07" path="res://scenes/player.tscn" id="2_ctbnd"]
+[ext_resource type="Texture2D" uid="uid://g72h528mv865" path="res://assets/bg_layer_1.png" id="4_0hnt7"]
+[ext_resource type="Texture2D" uid="uid://d4hor7kdbyuee" path="res://assets/bg_layer_2.png" id="5_63neo"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_n02te")
@@ -15,7 +17,7 @@ offset_left = 214.0
 offset_top = -176.0
 offset_right = 317.0
 offset_bottom = -152.0
-theme_override_colors/font_color = Color(0.32549, 0.32549, 0.32549, 1)
+theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 1)
 theme_override_fonts/font = ExtResource("2_5ehxf")
 horizontal_alignment = 2
 
@@ -24,7 +26,7 @@ offset_left = -316.0
 offset_top = -176.0
 offset_right = -209.0
 offset_bottom = -151.0
-theme_override_colors/font_color = Color(0.32549, 0.32549, 0.32549, 1)
+theme_override_colors/font_color = Color(0.12549, 0.12549, 0.12549, 1)
 theme_override_fonts/font = ExtResource("2_5ehxf")
 
 [node name="Chunks" type="Node" parent="."]
@@ -33,3 +35,21 @@ theme_override_fonts/font = ExtResource("2_5ehxf")
 top_level = true
 position = Vector2(100, -100)
 World = NodePath("..")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="MiddleLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/MiddleLayer"]
+position = Vector2(320, -60)
+texture = ExtResource("5_63neo")
+
+[node name="FrontLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/FrontLayer"]
+position = Vector2(320, -120)
+texture = ExtResource("4_0hnt7")
