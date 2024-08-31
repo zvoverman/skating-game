@@ -20,7 +20,7 @@ func _physics_process(delta):
 		jump()
 		
 	# if jump is held, jump higher by reducing gravity
-	if (!is_on_floor() && Input.is_action_pressed("ui_accept") && velocity.y < 0) or is_pressed:
+	if (!is_on_floor() && (Input.is_action_pressed("ui_accept") or is_pressed) && velocity.y < 0):
 		velocity.y += antiGravity * delta
 	
 	move_and_slide()
@@ -37,7 +37,7 @@ func _unhandled_input(event):
 	if event is InputEventScreenTouch and is_on_floor():
 		jump()
 	
-	if event is InputEventScreenTouch and event.pressed and !is_on_floor() and velocity.y < 0:
+	if event is InputEventScreenTouch and event.pressed:
 		is_pressed = true
 	else:
 		is_pressed = false
